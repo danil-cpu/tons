@@ -1,7 +1,7 @@
 #translation of number systems
 
 class Tons:
-	def __init__(self, number, notation_one, notation_two):
+	def __init__(self, number: int, notation_one: int, notation_two: int):
 		
 		self.number = number
 		self.notation_one = notation_one # max 32
@@ -10,8 +10,8 @@ class Tons:
 		self.literals = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 		self.result = self.convert_base()
 		
-	def convert_base(self, to_base=None):
-		result = ''
+	def convert_base(self, to_base: int=None) -> str:
+		result = str()
 		if isinstance(self.number, str):
 			if self.notation_one < 33:
 				n = int(self.number, self.notation_one)
